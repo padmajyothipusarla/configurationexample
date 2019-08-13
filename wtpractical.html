@@ -1,0 +1,179 @@
+﻿<!Doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Pete's Pizza Delivery</title>
+    <style>
+        table {
+            margin: auto;
+            padding: 1em;
+        }
+
+        td {
+            padding: 0 0.5em;
+            vertical-align: top;
+        }
+        body{
+            background-color:aliceblue;
+        }
+        table{
+            border:1px solid green;
+            
+        }
+    </style>
+    <script type="text/javascript">
+        function submitorder() {
+            var username = document.getElementById("name").value;
+            var phnno = document.getElementById("tel").value;
+            var address = document.getElementById("addr").value;
+            var email = document.getElementById("mail").value;
+            var city = document.getElementById("town").value;
+            var pincode = document.getElementById("pcode").value;
+            var div = document.getElementById("resultDiv");
+            div.innerHTML = "user name" + username + "<br/>";
+            div.innerHTML  = "user name" + phnno + "<br/>";
+            div.innerHTML = "user name" + address + "<br/>";
+            div.innerHTML = "user name" + email + "<br/>";
+            div.innerHTML = "user name" + city + "<br/>";
+            div.innerHTML = "user name" + pincode + "<br/>";
+        }
+        function toppingmarg() {
+            var div = document.getElementById("resultDiv");
+            var item = document.getElementById("marg");
+            if (item.checked == true) {
+                div.getElementById("resultDiv");
+            }
+        }
+         function toppingfour() {
+            var div = document.getElementById("resultDiv");
+            var item = document.getElementById("four");
+            if (item.checked == true) {
+                div.getElementById("resultDiv");
+            }
+        }
+         function toppingmeat() {
+            var div = document.getElementById("resultDiv");
+            var item = document.getElementById("meat");
+            if (item.checked == true) {
+                div.getElementById("resultDiv");
+            }
+        }
+        function sizesmall() {
+            var div = document.getElementById("resultDiv");
+             var qty = document.getElementById("s");
+            if (qty.checked == true) {
+                div.getElementById("resultDiv");
+            }
+        }
+        function sizemed() {
+             var div = document.getElementById("resultDiv");
+             var qty = document.getElementById("m");
+            if (qty.checked == true) {
+                div.getElementById("resultDiv");
+            }
+        }
+        function sizelar() {
+             var div = document.getElementById("resultDiv");
+             var qty = document.getElementById("l");
+            if (qty.checked == true) {
+                div.getElementById("resultDiv");
+            }
+        }
+        function mus() {
+             var div = document.getElementById("resultDiv");
+            var chkbox = document.getElementById("mu");
+            if (chkbox.checked == true) {
+                   div.getElementById("resultDiv");
+            }
+        }
+
+        function pepper() {
+             var div = document.getElementById("resultDiv");
+            var chkbox = document.getElementById("pe");
+            if (chkbox.checked == true) {
+                   div.getElementById("resultDiv");
+        }
+        function anchovies() {
+             var div = document.getElementById("resultDiv");
+            var chkbox = document.getElementById("an");
+            if (chkbox.checked == true) {
+                   div.getElementById("resultDiv");
+            }
+        }
+        function cheese() {
+             var div = document.getElementById("resultDiv");
+            var chkbox = document.getElementById("ch");
+            if (chkbox.checked == true) {
+                   div.getElementById("resultDiv");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1 style="text-align: center;">Pete's Pizza Delivery</h1>
+    <h2 style="text-align: center;">Online Order Form</h2>
+    <form method="get">
+        <table>
+            <tr>
+                <td style="text-align: right;"><label for="name">*Name: </label></td>
+                <td><input type="text" name="name" id="name" required /></td>
+                <td style="text-align: right;"><label for="tel">*Tel: </label></td>
+                <td><input type="tel" name="tel" id="tel" required /></td>
+            </tr>
+            <tr>
+                <td style="text-align: right;"><label for="addr">*Address: </label></td>
+                <td><input type="text" name="addr" id="addr" required /></td>
+                <td style="text-align: right;"><label for="mail">*Email: </label></td>
+                <td><input type="email" name="mail" id="mail" required /></td>
+            </tr>
+            <tr>
+                <td style="text-align: right;"><label for="town">*Town/city: </label></td>
+                <td><input type="text" name="town" id="town" required /></td>
+            </tr>
+            <tr>
+                <td style="text-align: right;"><label for="pcode">*Postcode: </label></td>
+                <td><input type="text" name="pcode" id="pcode" required /></td>
+            </tr>
+        </table>
+        <p style="text-align: center;">* required fields</p>
+        <table>
+            <tr>
+                <td>
+                    <h3>Topping</h3>
+                    <label><input type=radio name=topping id="marg" required value="marg" onchange="toppingmarg()"/> Margherita</label><br />
+                    <label><input type=radio name=topping id="four" required value="four" onchange="toppingfour()"/> Four Seasons</label><br />
+                    <label><input type=radio name=topping id="meat" required value="meat" onchange="toppingmeat()"/> Meat Feast</label><br />
+                </td>
+                <td>
+                    <h3>Size</h3>
+                    <label><input type=radio name=base id="s" required value="s" onchange="sizeamall()"/> Small</label><br />
+                    <label><input type=radio name=base id="m" required value="m" onchange="sizemed()"/> Medium</label><br />
+                    <label><input type=radio name=base id="l" required value="l" onchange="sizelar()"/> Large</label><br />
+                </td>
+                <td>
+                    <h3>Extras</h3>
+                    <label><input type=checkbox name=extra id="mu" value="mu" onchange="mus()" /> Mushrooms</label><br />
+                    <label><input type=checkbox name=extra id="pe" value="pe" onchange="pepper()" /> Green peppers</label><br />
+                    <label><input type=checkbox name=extra id="an" value="an" onchange="anchovies()" /> Anchovies</label><br />
+                    <label><input type=checkbox name=extra id="ch" value="ch" onchange="cheese()"/> Extra cheese</label><br />
+                </td>
+            </tr>
+        </table>
+        <br />
+        <table>
+            <tr>
+                <td style="text-align: right;"><label for="del">Preferred delivery time: </label></td>
+                <td><input type=time min="11:00" max="21:00" step="900" name="del" id="del" required /></td>
+            </tr>
+            <tr>
+                <td style="text-align: right;"><label for="instr">Delivery instructions: </label></td>
+                <td><textarea name="instr" id="instr" maxlength=1000></textarea></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;"><br /><button onclick="submitorder()">Submit order</button></td>
+            </tr>
+        </table>
+        <div id="resultDiv"></div>
+    </form>
+</body>
+</html>
